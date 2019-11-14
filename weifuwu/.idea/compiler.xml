@@ -9,7 +9,7 @@
         <module name="consumer1" />
         <module name="eurekaserver" />
         <module name="eurekaserver2" />
-        <module name="service1" />
+        <module name="service-hi" />
         <module name="service2" />
       </profile>
     </annotationProcessing>

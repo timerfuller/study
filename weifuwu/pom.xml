@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>eurekaserver</module>
-        <module>service-hi</module>
+        <module>service1</module>
         <module>consumer1</module>
         <module>service2</module>
         <module>eurekaserver2</module>
