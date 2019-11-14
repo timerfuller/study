@@ -1,0 +1,14 @@
+server:
+  port: 8801
+  context-path: /
+
+eureka:
+  instance:
+    hostname: localhost1
+  client:
+    serviceUrl:
+      defaultZone: http://localhost2:8802/eureka/
+
+spring:
+  application:
+    name: eurka-server
