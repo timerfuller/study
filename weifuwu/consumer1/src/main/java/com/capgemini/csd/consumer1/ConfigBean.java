@@ -1,5 +1,6 @@
 package com.capgemini.csd.consumer1;
 
+import com.netflix.loadbalancer.*;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,5 +13,11 @@ public class ConfigBean {
     @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
+    }
+
+    @Bean
+    public IRule getRule(){
+//        return  new RoundRobinRule();  RandomRule AvailabilityFilteringRule WeightedResponseTimeRule RetryRule BestAvailableRule ZoneAvoidanceRule
+        return new AvailabilityFilteringRule();
     }
 }
