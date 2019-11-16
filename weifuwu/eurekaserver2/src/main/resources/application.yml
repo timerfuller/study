@@ -1,6 +1,5 @@
 server:
   port: 8802
-  context-path: /
 
 eureka:
   instance:
