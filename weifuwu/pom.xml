@@ -13,7 +13,7 @@
         <module>consumer1</module>
         <module>service2</module>
         <module>eurekaserver2</module>
-        <module>consumer-feign</module>
+        <module>consumer1-feign</module>
     </modules>
 
     <packaging>pom</packaging>

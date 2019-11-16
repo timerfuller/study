@@ -25,4 +25,9 @@ public class ServiceHiApplication {
         return "hi " + name + " ,i am from service1";
     }
 
+    @RequestMapping("/say")
+    public String mmm(@RequestParam(value = "name", defaultValue = "serviceHi") String name) {
+        return "hi " + name + " ,i am from service1";
+    }
+
 }
