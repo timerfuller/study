@@ -1,6 +1,8 @@
 server:
   port: 8001
-
+feign:
+  hystrix:
+    enabled: true
 spring:
   application:
     name: consumer1-feign
