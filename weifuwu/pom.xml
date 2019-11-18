@@ -14,6 +14,8 @@
         <module>service2</module>
         <module>eurekaserver2</module>
         <module>consumer1-feign</module>
+        <module>service3</module>
+        <module>service4</module>
     </modules>
 
     <packaging>pom</packaging>
