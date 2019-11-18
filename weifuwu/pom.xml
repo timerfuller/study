@@ -16,6 +16,7 @@
         <module>consumer1-feign</module>
         <module>service3</module>
         <module>service4</module>
+        <module>hystrixdashboard</module>
     </modules>
 
     <packaging>pom</packaging>
