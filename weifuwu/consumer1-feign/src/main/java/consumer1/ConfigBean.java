@@ -34,7 +34,7 @@ public class ConfigBean {
 
         registrationBean.setLoadOnStartup(1);
 
-        registrationBean.addUrlMappings("/actuator/hystrix.stream");
+        registrationBean.addUrlMappings("/actuator/hystrix.stream1");
 
         registrationBean.setName("HystrixMetricsStreamServlet");
 

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: consumer1
+    name: consumer1-ribbon
   cloud:
     loadbalancer:
       retry:
