@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://localhost1:8801/eureka/,http://localhost2:8802/eureka/
+      defaultZone: http://localhost1:8801/eureka/
+server:
+  port: 10000
+spring:
+  application:
+    name: service-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: consumer1-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: consumer1-feign
+  ignored-services: consumer1-ribbon,consumer1-feign
