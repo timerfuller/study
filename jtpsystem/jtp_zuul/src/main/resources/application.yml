@@ -1,0 +1,26 @@
+server:
+  port: 9201
+
+spring:
+  application:
+    name: jtp_service_zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost1:8801/eureka/
+  #      defaultZone: http://localhost1:8801/eureka/,http://localhost2:8802/eureka/
+  instance:
+    instance-id: jtp_zuul
+    prefer-ip-address: true
+info:
+  app.name: microCloud
+  company.name: www.capgemini.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+zuul:
+  routes:
+    <jtp-microservice>:
+      customeSensitiveHeaders: true
+      sensitiveHeaders:

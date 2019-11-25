@@ -1,0 +1,13 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: service-hi
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost1:8801/eureka/,http://localhost2:8802/eureka/
+  instance:
+    instance-id: service2

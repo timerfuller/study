@@ -1,0 +1,32 @@
+server:
+  port: 8001
+feign:
+  hystrix:
+    enabled: true
+spring:
+  application:
+    name: consumer1-feign
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+
+# hystrix dashbord endpoint
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+ribbon:
+ # 同一实例最大重试次数，不包括首次调用
+  MaxAutoRetries: 1
+ # 重试其他实例的最大重试次数，不包括首次所选的server
+  MaxAutoRetriesNextServer: 1
+ # 是否所有操作都进行重试
+  OkToRetryOnAllOperations: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost1:8801/eureka/,http://localhost2:8802/eureka/
